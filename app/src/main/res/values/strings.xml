@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cars</string>
+    <string name="car_thumbnail">car thumbnail</string>
+    <string name="demo_text_title">Q7 - Greatness starts, when you don\'t stop.</string>
+    <string name="demo_ingress_desc">A car that keeps up with your demands – the Audi Q3. Powerful and agile.</string>
+    <string name="demo_date">29 November 2017, 15:11</string>
+</resources>
