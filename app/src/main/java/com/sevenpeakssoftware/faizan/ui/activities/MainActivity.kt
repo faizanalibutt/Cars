@@ -1,7 +1,8 @@
-package com.sevenpeakssoftware.faizan
+package com.sevenpeakssoftware.faizan.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.sevenpeakssoftware.faizan.R
 
 class MainActivity : AppCompatActivity() {
 
