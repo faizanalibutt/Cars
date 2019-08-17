@@ -2,22 +2,20 @@ package com.sevenpeakssoftware.faizan.models
 
 import com.google.gson.JsonObject
 import com.google.gson.annotations.SerializedName
+import org.json.JSONArray
 
 /**
- * Class which provides a model for car models
- * @constructor Sets all properties of the post
- * @property page get page number
- * @property pageSize get page size of desired amount
- * @property totalPageCount get page count.
- * @property wkda get detail information about many manufacturers.
+ * Class presenting Car Articles Model
+ * @constructor Sets all properties of the articles
+ * @property status check data is loaded or not.
+ * @property content contains all car articles.
+ * @property serverTime get page count.
  */
 data class CarArticlesModel(
-    @SerializedName("page")
-    val page: Int,
-    @SerializedName("pageSize")
-    val pageSize: Int,
-    @SerializedName("totalPageCount")
-    val totalPageCount: Int,
-    @SerializedName("wkda")
-    val wkda: JsonObject
+    @SerializedName("status")
+    val status: String,
+    @SerializedName("content")
+    val content: JSONArray,
+    @SerializedName("serverTime")
+    val serverTime: Int
 )
