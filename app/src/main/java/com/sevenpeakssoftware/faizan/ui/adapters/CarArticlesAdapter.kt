@@ -4,14 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.sevenpeakssoftware.faizan.ui.viewmodel.CarArticleViewModel
 import com.sevenpeakssoftware.faizan.R
 import com.sevenpeakssoftware.faizan.databinding.ItemCarBinding
 import com.sevenpeakssoftware.faizan.models.CarArticlesModel
-import com.sevenpeakssoftware.faizan.ui.viewmodel.CarArticleViewModel
 
 class CarArticlesAdapter : RecyclerView.Adapter<CarArticlesAdapter.ViewHolder>() {
 
-    private lateinit var carManufacturerList: List<CarArticlesModel>
+    private lateinit var carArtilesList: List<CarArticlesModel>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding: ItemCarBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.item_car, parent, false)
@@ -19,15 +19,15 @@ class CarArticlesAdapter : RecyclerView.Adapter<CarArticlesAdapter.ViewHolder>()
     }
 
     override fun getItemCount(): Int {
-        return if (::carManufacturerList.isInitialized) carManufacturerList.size else 0
+        return if (::carArtilesList.isInitialized) carArtilesList.size else 0
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(carManufacturerList[position])
+        holder.bind(carArtilesList[position])
     }
 
     fun updatePositionList(carManufacturerList: List<CarArticlesModel>) {
-        this.carManufacturerList = carManufacturerList
+        this.carArtilesList = carManufacturerList
         notifyDataSetChanged()
     }
 
@@ -36,7 +36,7 @@ class CarArticlesAdapter : RecyclerView.Adapter<CarArticlesAdapter.ViewHolder>()
         private val viewModel = CarArticleViewModel()
 
         fun bind(carArticle: CarArticlesModel) {
-            viewModel.bind(carArticle)
+            viewModel.bind(carArticle, 0)
             binding.viewModel = viewModel
         }
     }
