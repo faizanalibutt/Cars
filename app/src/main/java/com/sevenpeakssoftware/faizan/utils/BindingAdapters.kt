@@ -44,7 +44,7 @@ object BindingAdapters {
     @JvmStatic
     fun setMutableImage(view: ImageView, image: MutableLiveData<Int>) {
         val parentActivity: AppCompatActivity? = view.getParentActivity()
-        if (parentActivity != null && image != null) {
+        if (parentActivity != null) {
             image.observe(parentActivity, Observer { value ->
                 view.setImageResource(value)
             })

@@ -36,7 +36,7 @@ class CarArticlesAdapter : RecyclerView.Adapter<CarArticlesAdapter.ViewHolder>()
         private val viewModel = CarArticleViewModel()
 
         fun bind(carArticle: CarArticlesModel) {
-            viewModel.bind(carArticle, 0)
+            viewModel.bind(carArticle)
             binding.viewModel = viewModel
         }
     }
