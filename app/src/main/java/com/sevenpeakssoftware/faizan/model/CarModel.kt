@@ -1,21 +1,19 @@
-package com.sevenpeakssoftware.faizan.models
+package com.sevenpeakssoftware.faizan.model
 
-import com.google.gson.JsonObject
 import com.google.gson.annotations.SerializedName
-import org.json.JSONArray
 
 /**
  * Class presenting Car Articles Model
  * @constructor Sets all properties of the articles
  * @property status check data is loaded or not.
  * @property content contains all car articles.
- * @property serverTime get page count.
+ * @property serverTime it might be the time i request for data.
  */
-data class CarArticlesModel(
+data class CarModel(
     @SerializedName("status")
     val status: String,
     @SerializedName("content")
-    val content: JSONArray,
+    val content: MutableList<CarArticle>,
     @SerializedName("serverTime")
     val serverTime: Int
 )
